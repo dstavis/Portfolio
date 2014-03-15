@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Looping Cheat Sheet</title>
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+</head>
+<body>
+	<div class="container">
+		<header>		
+			<h1>Ruby Loops and Javascript Loops</h1>
+			<p>A bare bones list of all the iterating and looping methods for Ruby and Javascript.</p>
+		</header>
+		
+		<div id="nav">
+			<ul id="contents">
+				<li>
+					<a href="#simple_ruby_loops">Simple Ruby Loops</a>
+					<p>Loops that just loop through and do something without leaving a trace.</p>	
+				</li>	
+				<li>
+					<a href="#simple_ruby_iterators">Simple Ruby Iterators</a>
+					<p>Simple methods that iterate through each iteration in an array or hash without leaving a trace.</p>
+				</li>
+				<li>
+					<a href="#fancy_ruby">Fancy Ruby Iterators</a>
+					<p>Loops that iterate loop through an array or hash, but in addition to doing they DO leave a trace by changing array its iterating through or returning a new array.</p>
+				</li>
+				<li>
+					<a href="#javascript_loops">Javascript Loops</a><br>
+				</li>
+				<li>
+					<a href="#ruby_java">Ruby vs Javascript: Loop vs. Loop</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<a id="simple_ruby_loops"><h2>Simple Ruby Loops</h2></a>
+
+			<h3 id="while">The While Loop</h3>
+			<pre><code>
+			i=1
+			while i < 11
+				print "#{i} "
+				i+=1
+			end	
+			</code></pre>
+			<h4 class="output">
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+			</h4>
+
+			<h3 id="until">The Until Loop</h3>
+			<pre><code>
+			i=1
+			until i > 10
+				print "#{i} "
+				i+=1
+			end	
+			</code></pre>
+			<h4 class="output">
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+			</h4>	
+
+			<h3 id="while_modifier">The While Loop Modifier</h3>
+			<pre><code>
+			i=0
+			print "#{i+=1} " while i <10
+			</code></pre>
+			<h4 class="output">
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+			</h4>
+
+			<h3 id="until_modifier">The Until Loop Modifier</h3>
+			<pre><code>
+			i=1
+			print "#{i+=1} " until i == 10
+			</code></pre>
+			<h4 class="output">
+				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+			</h4>
+
+
+
+			
+		</div>
+
+
+	</div>
+</body>
+</html>

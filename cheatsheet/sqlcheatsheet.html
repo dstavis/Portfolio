@@ -1,0 +1,192 @@
+<!--///Bonus at the end if we have time: Implement CSS-only show/hide content. http://dev.opera.com/articles/view/css3-show-and-hide/-->
+
+<!--/What topic should we make a cheat sheet for?-->
+<!--Ruby-->
+<!--HTML-->
+<!--CSS-->
+<!--Git-->
+<!--SQL-->
+
+<!--Including examples would be great.-->
+
+<!--What would be AMAZING is if we coordinated with the rest of the cohort to create a compendium of cheat sheets on various subjects from Phase 0.-->
+
+<!--What we could do in this session:-->
+<!--1. Pick one subject for us to do (SQL)-->
+<!--2. Write a main page with links to the various subjects (other people's cheat sheets)-->
+
+<html>
+
+<head>
+  <!--CSS Part-->
+  <style>
+    body {
+      background-color: white;
+    }
+    div {
+      border: 1px solid black;
+      margin: 10px 5px;
+      border-radius: 5px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table, td{
+      border: 1px solid;
+      width: 300px;
+      background-color: beige;
+    }
+    .code {
+      font-family: sans-serif;
+      font-size: 1.2em;
+      font-weight: bold;
+      white-space: pre;
+    }
+    #ops {
+      border:none;
+    }
+  </style>
+  <!--CSS End -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>SQL Cheat Sheet</title>
+  
+  
+  <!-- JavaScript-->
+  <script type="text/javascript" src="CollapsibleLists.js"></script>
+</head>
+
+<body style="">
+  <h1>Deep dive into the SQL SELECT Statement</h1>
+  
+  <h2>Structure of a SELECT Statement</h2>
+    <p>Here is an example SELECT statement.</p>
+    <p class="code">SELECT * FROM highscores WHERE score > 50 </p>
+    It returns this data:<br>
+      <table>
+        <tr>
+          <th>firstname</th>
+          <th>lastname</th>
+          <th>score</th>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td> 
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>Doe</td> 
+          <td>100</td>
+        </tr>
+      </table>
+    
+    <div id="parts">
+      <p>The SELECT statement is made up of 3 parts.</p>
+        <ol>
+          <li>SELECT x</li>
+          <li>FROM y</li>
+          <li>WHERE z</li>
+        </ol>
+    </div>
+    <div id="xyz">
+      <p>What are x, y, and z?</p>
+        <ul>
+          <li>x: The name of the column you want to see (or * for all columns). Each column holds a certain type of data.</li>
+            <ul>
+              <li>
+              <div id="x">
+                <h4>x</h4>
+                <p>x can be extended using a comma to show multiple columns.
+                <p>Here's an example:</p>
+                  <p class = "code">SELECT firstname, lastname FROM highscores WHERE score > 50</p>
+                 
+                 <table>
+                    <tr>
+                      <th>firstname</th>
+                      <th>lastname</th>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td> 
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td> 
+                    </tr>
+                    <tr>
+                      <td>Bob</td>
+                      <td>Doe</td> 
+                    </tr>
+                  </table>
+              </div>  
+              </li>
+            </ul>
+
+          <li>y: The name of the table you're drawing from</li>
+          <li>z: Called the Clause, z reduces the amount of data you pull to a more specific subset. It's like when you "Refine your search results." It is actually optional.</li>
+        </ul>
+    </div>  
+    
+    <div id="y">
+      <h4>y</h4>
+      <p>y can be extended to allow you to draw data from multiple tables using JOIN statements. We'll expand on those later. For now, we'll work with drawing data from only one table.</p>
+    </div>
+    
+    <div id="z">
+      <h4>z</h4>
+      <p>z, called the Clause, reduces the amount of data you pull to a more specific subset. It's like when you "Refine your search results"
+      <p>It is made up of three parts:</p>
+      <ul>
+        <li>a column name,</li>
+          <p>In the same format as x, but may be a different column from the one you </p>
+        <li>operator,</li>
+          <div id="ops">
+            <ul>List of Operators
+              <li>=	Equal</li>
+              <li><>	Not equal. Note: In some versions of SQL this operator may be written as !=</li>
+              <li>>	Greater than</li>
+              <li><	Less than</li>
+              <li>>=	Greater than or equal</li>
+              <li><=	Less than or equal</li>
+              <li>BETWEEN	Between an inclusive range</li>
+              <li>LIKE	Search for a pattern</li>
+              <li>IN	To specify multiple possible values for a column</li>
+            </ul>
+          </div> <!-- ops -->
+        <li>and value.</li>
+          <p>The value is what you want the data in the column you've chosen to match.
+            For example, the number 50 in the score column, or the string "smith" in the lastname column for all players who have that lastname.
+          </p>
+    </div><!-- z -->
+    
+  </ul>
+  
+</body>
+  
+</html>
+
+
+
+
+<!--
+FROM
+
+SELECT x FROM y
+(WHERE z )
+
+GROUP BY
+ORDER BY
+-->
+
+<!-- Some of The Most Important SQL Commands
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index -->
